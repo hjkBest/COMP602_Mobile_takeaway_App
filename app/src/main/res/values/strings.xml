@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">COMP602_Restaurant_Mobile_Application</string>
+    <string name="menu_search">search</string>
+    <string name="menu_shopping">shopping</string>
+    <string name="menu_profile">profile</string>
+    <string name="name_of_pappaRich">PappaRich</string>
+    <string name="name_of_kimchi">The Kimchi Project</string>
+    <string name="name_of_cave">The Cave</string>
+    <string name="name_of_coco">The Coco's Cantina</string>
+</resources>
