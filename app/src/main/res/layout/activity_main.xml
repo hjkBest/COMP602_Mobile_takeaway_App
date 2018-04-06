@@ -21,6 +21,10 @@
         android:fillViewport="true"
 
         >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -130,27 +134,25 @@
             </LinearLayout>
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="bottom"
-            android:orientation="vertical">
-
-
-            <android.support.design.widget.BottomNavigationView
-                android:id="@+id/bnve"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:background="@color/colorPrimary"
-                app:itemIconTint="@color/colorPrimary"
-                app:itemTextColor="@color/selector_item_color"
-                app:menu="@menu/menu_navigation_with_view_pager">
-
-            </android.support.design.widget.BottomNavigationView>
-
         </LinearLayout>
     </ScrollView>
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="bottom">
 
-
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bnve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            app:itemIconTint="@color/colorPrimary"
+            app:itemTextColor="@color/selector_item_color"
+            app:menu="@menu/menu_navigation_with_view_pager">
+        </android.support.design.widget.BottomNavigationView>
+    </LinearLayout>
 </LinearLayout>
