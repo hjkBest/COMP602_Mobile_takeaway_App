@@ -6,5 +6,22 @@
     <string name="name_of_pappaRich">PappaRich</string>
     <string name="name_of_kimchi">The Kimchi Project</string>
     <string name="name_of_cave">The Cave</string>
-    <string name="name_of_coco">The Coco's Cantina</string>
+    <string name="name_of_coco">The Coco\'s Cantina</string>
+    <string name="menu_of_pappaRich">PappaRich\'s Menu</string>
+    <string name="pappaRich_meal1">Fish Fillet Noodle Soup</string>
+    <string name="pappaRich_meal2">Curry Fish Fillet Noodle Soup</string>
+    <string name="pappaRich_meal3">Chicken Curry Laksa</string>
+    <string name="pappaRich_meal4">Vegetable Curry Laksa</string>
+    <string name="pappaRich_meal5">Seafood Curry Laksa</string>
+    <string name="pappaRich_meal6">Pappa Char koay Teaw</string>
+    <string name="pappaRich_meal7">Pappa Fried Rice Noodles</string>
+    <string name="pappaRich_meal8">Nasi Lemak With Beef Rendang</string>
+    <string name="pappaRich_meal9">HaiNan Curry Chicken Chop With Rice</string>
+    <string name="pappaRich_meal10">Steamed Mantau With KAYA</string>
+    <string name="pappaRich_meal11">Roti KAYA</string>
+    <string name="pappaRich_meal12">Roti Bom</string>
+    <string name="pappaRich_meal13">Sambal Spinach</string>
+    <string name="pappaRich_meal14">Pappa Prawn Mee</string>
+    <string name="pappaRich_meal15">Crisry Egg Noodles</string>
+    <string name="papaRich_foodPhoto">PappaRich food\'s Photo</string>
 </resources>
