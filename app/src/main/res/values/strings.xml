@@ -24,4 +24,10 @@
     <string name="pappaRich_meal14">Pappa Prawn Mee</string>
     <string name="pappaRich_meal15">Crisry Egg Noodles</string>
     <string name="papaRich_foodPhoto">PappaRich food\'s Photo</string>
+    <string name="confirm">Confirm</string>
+    <string name ="Nspicy">No Spicy</string>
+    <string name ="Sspicy">Small Spicy</string>
+    <string name ="Mspicy">Medium Spicy</string>
+    <string name ="spicy">Spicy</string>
+
 </resources>
