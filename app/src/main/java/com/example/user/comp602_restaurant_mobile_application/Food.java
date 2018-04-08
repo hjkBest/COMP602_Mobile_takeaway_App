@@ -6,6 +6,7 @@ public class Food {
     private int mFoodPrice;
     private String mProvidedBy;
 
+   //constructor
     public  Food(int foodAmount,String foodName,int foodPrice,String providedBy)
     {
         this.mFoodAmount=foodAmount;
@@ -14,6 +15,7 @@ public class Food {
         this.mProvidedBy=providedBy;
     }
 
+    //get every attribute
     public int getFoodAmount() {
         return mFoodAmount;
     }
@@ -30,6 +32,7 @@ public class Food {
         return mProvidedBy;
     }
 
+    //set every attribute
     public void setFoodAmount(int foodAmount) {
         mFoodAmount = foodAmount;
     }
