@@ -1,373 +1,298 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     tools:context=".paparichmenu">
 
-    <TextView
-        android:id="@+id/restaurant_pappaRich"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/menu_of_pappaRich"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_gravity="center_horizontal"/>
-
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:layout_alignParentTop="true"
         android:fillViewport="true">
 
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center_horizontal"
-        android:rowCount="5"
-        android:columnCount="3"
-        >
-
-        <ImageButton
-            android:id="@+id/imageButton1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/papaRich_foodPhoto"
-            android:src="@drawable/paparich_f1"
-            android:scaleType="fitXY"
-            android:background="#e0000000"
-            android:layout_margin="5dp"
-            />
-
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/papaRich_foodPhoto"
-            android:src="@drawable/paparich_f2"
-            android:scaleType="fitXY"
-            android:background="#e0000000"
-            android:layout_margin="5dp"
-            />
-
-        <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/papaRich_foodPhoto"
-            android:src="@drawable/paparich_f3"
-            android:scaleType="fitXY"
-            android:background="#e0000000"
-            android:layout_margin="5dp"
-            />
-
-        <TextView
-            android:id="@+id/meal1"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="@string/pappaRich_meal1"
-            android:textSize="7sp"
-            android:gravity="center"
-            android:singleLine="false"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:id="@+id/meal2"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="@string/pappaRich_meal2"
-            android:textSize="7sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"/>
-
-        <TextView
-            android:id="@+id/meal3"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="@string/pappaRich_meal3"
-            android:textSize="7sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"/>
-
-        <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/papaRich_foodPhoto"
-            android:src="@drawable/paparich_f4"
-            android:scaleType="fitXY"
-            android:background="#e0000000"
-            android:layout_margin="5dp"
-            />
-
-        <ImageButton
-            android:id="@+id/imageButton5"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/papaRich_foodPhoto"
-            android:src="@drawable/paparich_f5"
-            android:scaleType="fitXY"
-            android:background="#e0000000"
-            android:layout_margin="5dp"
-            />
-
-        <ImageButton
-            android:id="@+id/imageButton6"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/papaRich_foodPhoto"
-            android:src="@drawable/paparich_f6"
-            android:scaleType="fitXY"
-            android:background="#e0000000"
-            android:layout_margin="5dp"
-            />
-
-        <TextView
-            android:id="@+id/meal4"
+        <GridLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/pappaRich_meal4"
-            android:textSize="7sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:columnCount="3"
+            android:orientation="horizontal"
+            android:rowCount="5">
 
-        <TextView
-            android:id="@+id/meal5"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="@string/pappaRich_meal5"
-            android:textSize="7sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/FOOD"
+                android:layout_columnSpan="3"
+                android:layout_gravity="center"
+                android:text="@string/food"
+                android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/meal6"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="@string/pappaRich_meal6"
-            android:textSize="7sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"/>
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="#e0000000"
+                android:contentDescription="@string/R1_foodPhoto"
+                android:scaleType="fitXY" />
 
-        <ImageButton
-            android:id="@+id/imageButton7"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/papaRich_foodPhoto"
-            android:src="@drawable/paparich_f7"
-            android:scaleType="fitXY"
-            android:background="#e0000000"
-            android:layout_margin="5dp"
-            />
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="#e0000000"
+                android:contentDescription="@string/R1_foodPhoto"
+                android:scaleType="fitXY" />
 
-        <ImageButton
-            android:id="@+id/imageButton8"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/papaRich_foodPhoto"
-            android:src="@drawable/paparich_f8"
-            android:scaleType="fitXY"
-            android:background="#e0000000"
-            android:layout_margin="5dp"
-            />
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="#e0000000"
+                android:contentDescription="@string/R1_foodPhoto"
+                android:scaleType="fitXY" />
 
-        <ImageButton
-            android:id="@+id/imageButton9"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/papaRich_foodPhoto"
-            android:src="@drawable/paparich_f9"
-            android:scaleType="fitXY"
-            android:background="#e0000000"
-            android:layout_margin="5dp"
-            />
+            <TextView
+                android:id="@+id/meal1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="@string/R1_meal1"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/meal7"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="@string/pappaRich_meal7"
-            android:textSize="7sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/meal2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="@string/R1_meal2"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/meal8"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="@string/pappaRich_meal8"
-            android:textSize="7sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/meal3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="@string/R1_meal3"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/meal9"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="@string/pappaRich_meal9"
-            android:textSize="7sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"/>
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="#e0000000"
+                android:contentDescription="@string/R1_foodPhoto"
+                android:scaleType="fitXY" />
 
-        <ImageButton
-            android:id="@+id/imageButton10"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/papaRich_foodPhoto"
-            android:src="@drawable/paparich_f10"
-            android:scaleType="fitXY"
-            android:background="#e0000000"
-            android:layout_margin="5dp"
-            />
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="#e0000000"
+                android:contentDescription="@string/R1_foodPhoto"
+                android:scaleType="fitXY" />
 
-        <ImageButton
-            android:id="@+id/imageButton11"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/papaRich_foodPhoto"
-            android:src="@drawable/paparich_f11"
-            android:scaleType="fitXY"
-            android:background="#e0000000"
-            android:layout_margin="5dp"
-            />
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="#e0000000"
+                android:contentDescription="@string/R1_foodPhoto"
+                android:scaleType="fitXY" />
 
-        <ImageButton
-            android:id="@+id/imageButton12"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/papaRich_foodPhoto"
-            android:src="@drawable/paparich_f12"
-            android:scaleType="fitXY"
-            android:background="#e0000000"
-            android:layout_margin="5dp"
-            />
+            <TextView
+                android:id="@+id/meal4"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="@string/R1_meal4"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/meal10"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="@string/pappaRich_meal10"
-            android:textSize="7sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/meal5"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="@string/R1_meal5"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/meal11"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="@string/pappaRich_meal11"
-            android:textSize="7sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/meal6"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="@string/R1_meal6"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/meal12"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="@string/pappaRich_meal12"
-            android:textSize="7sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"/>
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="#e0000000"
+                android:contentDescription="@string/R1_foodPhoto"
+                android:scaleType="fitXY" />
 
-        <ImageButton
-            android:id="@+id/imageButton13"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/papaRich_foodPhoto"
-            android:src="@drawable/paparich_f13"
-            android:scaleType="fitXY"
-            android:background="#e0000000"
-            android:layout_margin="5dp"
-            />
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="#e0000000"
+                android:contentDescription="@string/R1_foodPhoto"
+                android:scaleType="fitXY" />
 
-        <ImageButton
-            android:id="@+id/imageButton14"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/papaRich_foodPhoto"
-            android:src="@drawable/paparich_f14"
-            android:scaleType="fitXY"
-            android:background="#e0000000"
-            android:layout_margin="5dp"
-            />
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="#e0000000"
+                android:contentDescription="@string/R1_foodPhoto"
+                android:scaleType="fitXY" />
 
-        <ImageButton
-            android:id="@+id/imageButton15"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:contentDescription="@string/papaRich_foodPhoto"
-            android:src="@drawable/paparich_f15"
-            android:scaleType="fitXY"
-            android:background="#e0000000"
-            android:layout_margin="5dp"
-            />
+            <TextView
+                android:id="@+id/meal7"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="@string/R1_meal7"
+                android:textSize="12sp"
+                android:singleLine="false"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/meal13"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="@string/pappaRich_meal13"
-            android:textSize="7sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/meal8"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="@string/R1_meal8"
+                android:textSize="12sp"
+                android:singleLine="false"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/meal14"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="@string/pappaRich_meal14"
-            android:textSize="7sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/meal9"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="@string/R1_meal9"
+                android:textSize="12sp"
+                android:singleLine="false"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/meal15"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="@string/pappaRich_meal15"
-            android:textSize="7sp"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"/>
+            <ImageButton
+                android:id="@+id/imageButton10"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="#e0000000"
+                android:contentDescription="@string/R1_foodPhoto"
+                android:scaleType="fitXY" />
+
+            <ImageButton
+                android:id="@+id/imageButton11"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="#e0000000"
+                android:contentDescription="@string/R1_foodPhoto"
+                android:scaleType="fitXY" />
+
+            <ImageButton
+                android:id="@+id/imageButton12"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:background="#e0000000"
+                android:contentDescription="@string/R1_foodPhoto"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/meal10"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="@string/R1_meal10"
+                android:textSize="12sp"
+                android:singleLine="false"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/meal11"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="@string/R1_meal11"
+                android:textSize="12sp"
+                android:singleLine="false"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/meal12"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="@string/R1_meal12"
+                android:textSize="12sp"
+                android:singleLine="false"
+                android:textStyle="bold" />
 
 
-    </GridLayout>
+            <TextView
+                android:id="@+id/Drink"
+                android:layout_columnSpan="3"
+                android:layout_gravity="center"
+                android:text="@string/drink"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/Dessret"
+                android:layout_columnSpan="3"
+                android:layout_gravity="center"
+                android:text="@string/dessert"
+                android:textSize="20sp" />
+        </GridLayout>
     </ScrollView>
-    <LinearLayout
-        android:id="@+id/content"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:gravity="bottom">
-
-        <android.support.design.widget.BottomNavigationView
-            android:id="@+id/bnve"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:gravity="right"
             android:background="@color/colorPrimary"
-            app:itemIconTint="@color/colorPrimary"
-            app:itemTextColor="@color/selector_item_color"
-            app:menu="@menu/menu_navigation_with_view_pager">
-        </android.support.design.widget.BottomNavigationView>
-
-    </LinearLayout>
-</LinearLayout>
+            android:text="Order: $0"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:id = "@+id/ordernum"
+            />
+</RelativeLayout>
 

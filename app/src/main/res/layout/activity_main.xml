@@ -43,7 +43,7 @@
                     android:id="@+id/restaurant_pappaRich"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/name_of_pappaRich"
+                    android:text="@string/Restaurant1"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -69,7 +69,7 @@
                     android:id="@+id/restaurant_kimchi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/name_of_kimchi"
+                    android:text="@string/Restaurant2"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -96,7 +96,7 @@
                     android:id="@+id/restaurant_cave"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/name_of_cave"
+                    android:text="@string/Restaurant3"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -121,7 +121,7 @@
                     android:id="@+id/restaurant_coco"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/name_of_coco"
+                    android:text="@string/Restaurant4"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -133,9 +133,17 @@
                     android:src="@drawable/cover_photo_coco" />
             </LinearLayout>
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sendButton"
+                android:id="@+id/send_message"/>
+
         </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
+
     <LinearLayout
         android:id="@+id/content"
         android:layout_width="fill_parent"

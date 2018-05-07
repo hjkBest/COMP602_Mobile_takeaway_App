@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".Cave">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:rowCount="5"
+            android:columnCount="3"
+            >
+
+            <TextView
+                android:layout_columnSpan="3"
+                android:id="@+id/FOOD"
+                android:text="@string/food"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                />
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/R3_foodPhoto"
+                android:scaleType="fitXY"
+                android:background="#e0000000"
+                android:layout_margin="5dp"
+                />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/R3_foodPhoto"
+                android:scaleType="fitXY"
+                android:background="#e0000000"
+                android:layout_margin="5dp"
+                />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/R3_foodPhoto"
+                android:scaleType="fitXY"
+                android:background="#e0000000"
+                android:layout_margin="5dp"
+                />
+
+            <TextView
+                android:id="@+id/meal1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="meal1"
+                android:textSize="7sp"
+                android:gravity="center"
+                android:singleLine="false"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/meal2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="meal2"
+                android:textSize="7sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/meal3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="meal1"
+                android:textSize="7sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+        </GridLayout>
+    </ScrollView>
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bnve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="@color/colorPrimary"
+        app:itemTextColor="@color/selector_item_color"
+        app:menu="@menu/menu_navigation_with_view_pager">
+    </android.support.design.widget.BottomNavigationView>
+</RelativeLayout>
+

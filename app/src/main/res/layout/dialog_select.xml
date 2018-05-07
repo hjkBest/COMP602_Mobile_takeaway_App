@@ -1,54 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    >
+    android:padding="2dp"
+    android:layout_gravity="center" >
 
+    <SeekBar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:max="10"
+        android:progress="0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
 
     <TextView
+        android:id="@+id/textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pappaRich_meal1"
-        android:layout_gravity="center"
-        android:textSize="25sp"
-        />
+        android:text="Please select amount of food"
+        android:textSize="25dp"
+        android:layout_gravity="center"/>
 
-    <CheckBox
-        android:layout_width="wrap_content"
+    <EditText
+        android:id = "@+id/inputtext"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Nspicy"
-
-        />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Sspicy"
-
-        />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/Mspicy"
-
-        />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/spicy"
-
-        />
+        android:hint="Detail about the meal" />
 
     <Button
-        android:id="@+id/confirmbutton"
-        android:text="@string/confirm"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"
+        android:id="@+id/buttonC"
         android:layout_width="match_parent"
-        android:background="@color/colorAccent"
-      />
+        android:layout_height="wrap_content"
+        android:text="@string/confirm" />
 </LinearLayout>
