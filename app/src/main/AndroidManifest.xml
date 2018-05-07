@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="com.example.user.comp602_restaurant_mobile_application">
+    package="com.example.user.comp602_restaurant_mobile_application">
 
-<application
-    android:allowBackup="true"
-    android:icon="@mipmap/ic_launcher"
-    android:label="@string/app_name"
-    android:roundIcon="@mipmap/ic_launcher_round"
-    android:supportsRtl="true"
-    android:theme="@style/AppTheme">
-    <activity android:name=".MainActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-    <activity android:name=".paparichmenu"
-        android:parentActivityName=".MainActivity">
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-    </activity>
-</application>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".paparichmenu"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Kimchi"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Cave"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".COCO"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".messageSend"
+            android:parentActivityName=".MainActivity">
+        </activity>
+    </application>
 
 </manifest>
