@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textviewnumber"
-        android:text="@string/phone_number"/>
+        android:text="@string/R_name"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -25,19 +25,17 @@
         android:layout_height="wrap_content"
         android:text="@string/order_detail"/>
 
-    <EditText
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minLines="3"
-        android:text="@string/order_string"
-        android:id="@+id/message"/>
+        android:text=""
+        android:id="@+id/detail"/>
+
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/send"
         android:id="@+id/send"/>
-
-
-
 </LinearLayout>
