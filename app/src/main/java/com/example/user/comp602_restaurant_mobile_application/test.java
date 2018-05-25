@@ -6,7 +6,8 @@ import java.util.Map.Entry;
 
 public class test {
     Map<String,String> m = new HashMap<String, String>();
-
+    String orderstr = "";
+    int total = 10;
     public static void main(String[] args) {
         test t = new test();
         t.testmap();
@@ -17,9 +18,12 @@ public class test {
         m.put("meal2", "3");
         m.put("meal3", "5");
         for (Entry<String, String> order : m.entrySet()) {
-            order.getKey();
-            order.getValue();
-            System.out.println(order.getKey() + "  " + order.getValue());
+            String str1 = order.getKey();
+            String str2 = order.getValue();
+            orderstr = orderstr + str1 + " " + str2 + "\n";
+
         }
+        orderstr = orderstr + "$: " + total + "\n";
+        System.out.print(orderstr);
     }
 }
