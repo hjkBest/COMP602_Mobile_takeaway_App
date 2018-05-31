@@ -4,22 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textviewnumber"
-        android:text="@string/R_name"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:id="@+id/mobile">
-
-    <requestFocus/>
-    </EditText>
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,4 +22,16 @@
         android:layout_height="wrap_content"
         android:text="@string/send"
         android:id="@+id/send"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Generate QR Code"
+        android:id="@+id/code"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan QR Code"
+        android:id="@+id/scan"/>
 </LinearLayout>
