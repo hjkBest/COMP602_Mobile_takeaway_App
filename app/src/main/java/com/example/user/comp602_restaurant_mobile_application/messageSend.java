@@ -6,27 +6,26 @@ import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import android.content.Intent;
 import java.util.List;
 
 public class messageSend extends AppCompatActivity{
-
+    String num1 = "5554";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sendmessage);
         TextView oinfor =(TextView)findViewById(R.id.detail);
-        String sID=getIntent().getStringExtra("orderinfor");
+        final String sID=getIntent().getStringExtra("orderinfor");
         oinfor.setText(sID);
-        Button button =(Button)this.findViewById(R.id.send);
-        button.setOnClickListener(new View.OnClickListener() {
+
+        Button button1 =(Button)this.findViewById(R.id.send);
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText mobileText =(EditText)findViewById(R.id.mobile);
-                String number=mobileText.getText().toString();
+                String number=num1;
                 TextView oinfor =(TextView)findViewById(R.id.detail);
                 String message=oinfor.getText().toString();
                 if(message!=null){
@@ -39,6 +38,26 @@ public class messageSend extends AppCompatActivity{
                         Toast.makeText(getApplicationContext(),"SENT",Toast.LENGTH_SHORT).show();
                     }
                 }
+            }
+        });
+
+        Button button2 = (Button)this.findViewById(R.id.code);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent generateCode = new Intent(messageSend.this, generateQR.class);
+                generateCode.putExtra("codeinfor",sID);
+                startActivity(generateCode);
+            }
+        });
+
+        Button button3 = (Button)this.findViewById(R.id.scan);
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent scanCode = new Intent(messageSend.this, scanQR.class);
+                scanCode.putExtra("codeinfor",sID);
+                startActivity(scanCode);
             }
         });
     }

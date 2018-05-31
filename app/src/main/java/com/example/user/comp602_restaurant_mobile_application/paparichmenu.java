@@ -4,6 +4,8 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.telephony.SmsManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -15,8 +17,9 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.view.View.OnClickListener;
 import com.squareup.picasso.Picasso;
 import android.widget.EditText;
+import java.util.List;
 import java.util.Map;
-
+import 	java.util.UUID;
 import java.util.HashMap;
 
 public class paparichmenu extends AppCompatActivity {
@@ -26,7 +29,8 @@ public class paparichmenu extends AppCompatActivity {
     String mealname = ""; //the name of meal
     Map<String,String> m = new HashMap<String, String>(); //use to save the order detail
     String orderstr = "";  //save the order detail as a string, that could allow us to send it to the another activity
-
+    String uniqueID = UUID.randomUUID().toString();
+    String num1 = "5554";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,22 +38,32 @@ public class paparichmenu extends AppCompatActivity {
         setTitle("Restaurant1 Menu"); //set title to the Restaurant1 menu page
         setImage(); //method shows below, used to set up the photo
         Button sendMassage = (Button) findViewById(R.id.send_message);
-
         //set ClickListener to the button
+
         sendMassage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(paparichmenu.this, messageSend.class); //declare new intent
+                Intent intent = new Intent(paparichmenu.this, generateQR.class); //declare new intent
+                String number=num1;
 
-                //get the data inside the array
                 for (Map.Entry<String, String> order : m.entrySet()) {
                     String str1 = order.getKey();
                     String str2 = order.getValue();
                     orderstr = orderstr + str1 + " " + str2 + "\n";
                 }
-                orderstr = orderstr + "$: " + total + "\n";//add the total price to the end of the string
+                orderstr = uniqueID + "\n" + orderstr + "\n"  + "$: " + total + "\n";//add the total price to the end of the string
 
-                intent.putExtra("orderinfor",orderstr);    //send the data to other activity
+                if(orderstr!=null){
+                    SmsManager smsManager=SmsManager.getDefault();
+                    List<String> texts=smsManager.divideMessage(orderstr);
+                    for(String text:texts)
+                    {
+                        smsManager.sendTextMessage(number,null,text,null,null);
+                        Log.i("sms","send a message");
+                        Toast.makeText(getApplicationContext(),"SENT",Toast.LENGTH_SHORT).show();
+                    }
+                }
+                intent.putExtra("codeinfor",orderstr);
                 startActivity(intent);
             }
         });
@@ -191,6 +205,10 @@ public class paparichmenu extends AppCompatActivity {
         final SeekBar seekbar = (SeekBar) view.findViewById(R.id.seekbar);
         final EditText edtext = (EditText) view.findViewById(R.id.inputtext);
         final TextView order = (TextView) findViewById(R.id.ordernum);
+
+
+
+
 
         //set the ClickListener
         btn.setOnClickListener(new OnClickListener() {
