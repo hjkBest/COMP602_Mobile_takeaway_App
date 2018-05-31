@@ -3,8 +3,18 @@
     package="com.example.user.comp602_restaurant_mobile_application">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.SEND_SMS"/>
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -31,11 +41,19 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".COCO"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".messageSend"
-            android:parentActivityName=".MainActivity">
-        </activity>
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".scanQR"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".generateQR"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DisplayInfor"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>
