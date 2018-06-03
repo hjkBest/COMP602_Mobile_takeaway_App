@@ -94,32 +94,13 @@ Sequence Diagram
 ![image1](http://chuantu.biz/t6/323/1527990821x-1566660859.png)
 
 
+Acknowledgements
+=====
+Barry Dowdeswell
+  * Paper Leader and Lecturer AUT City
 
-```seq
-user->app: Open the APP
-Note right of app: Load the restaurants List (home page)
-app-->user: display the restaurants List (home page)
-user->app: choice the restaurants
-Note right of app: Load the menu page of the selected restaurants
-app-->user: display the menu page
-user->app: select the meal(s)
-Note right of app: receive the order
-app->app: generate the order information
-user->app: switch to the order page to check it
-app-->user: display the order detail
-user->app: confirm the order
-app->restaurant: send order
-app->app: generate QR code
-app-->user: display QR code
-Note right of restaurant: perpare the order 
-user->restaurant: arrive the restaurant
-restaurant->user: scan the QR code
-user->restaurant: show the QR code
-user->restaurant: pick up the order
-restaurant-->user: provide the order 
-user->restaurant: finish the payment
-```
-
-
+Mujtaba Alshakhouri
+  * Teaching Assistant AUT City
+ 
 End
 ====
