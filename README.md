@@ -1,8 +1,8 @@
-# COMP602_Restaurant_App
-#Mobile Takeaway APP
+COMP602_Restaurant_App
+Mobile Takeaway APP
 =====================
 
-##Team member
+Team member
 ========
 * Brian liang
 * Jiakun hou 
@@ -10,12 +10,12 @@
 * Yunchao cai 
 
 
-##Introduction
+Introduction
 =====
 > Our team project purpose is to build a modern, useful application that could help our user to order their takeaway easier than before. Our team project is trying to provide a platform that includes many restaurants. So, the user could have more option when they want to order a takeaway. We will manage user order information and generate a unique order ID used to avoid mess up the order. We put the send button down below each menu page; the request will send to the restaurants when the user clicks the button. And a QR code will produce and get to the user.  
 >
 
-##Installation
+Installation
 =====
 * Android API 16 or higher 
 * Need APP permissions 
@@ -23,14 +23,14 @@
    * SMS
    * Storage
 
-##Development Environment
+Development Environment
 ====
 * Android studio V 3.1
 * JAVA
 
 
 
-##Porject version: V.0.03
+Porject version: V.0.03
 ===========
 
 | Version | Sprint |      Date |
@@ -40,7 +40,7 @@
 | V.0.03  |   2    | 11/6/2018 |
 
 
-##Change Log
+Change Log
 =========
 
 V.0.02 (7/5/2018)
@@ -71,7 +71,7 @@ V.0.03 (11/6/2018)
 * Could scan the QR code
 
 
-##Project Feature (futrue)
+Project Feature (futrue)
 =============
 * Allows the user to check the order history 
 * Will implementation login system (need sign up as a user, more secure)
@@ -82,13 +82,13 @@ V.0.03 (11/6/2018)
 
 
 
-##Project Preview
+Project Preview
 ========
-![Imgur](https://i.imgur.com/Ofg1eIv.gifv)
+![Imgur](https://i.imgur.com/Ofg1eIv.gif)
 
 
 
-##Sequence Diagram
+Sequence Diagram
 =================
 
 ```sequence
@@ -117,4 +117,5 @@ user->restaurant: finish the payment
 ```
 
 
-##End
+End
+====
