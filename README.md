@@ -56,7 +56,7 @@ V.0.03 (11/6/2018)
 * Could scan the QR code
 
 
-##Project Feature(fulfilled)
+Project Feature(fulfilled)
 ==========
 * Allows user to select the restaurants
 * Allows user to select the favor and add comment
@@ -86,7 +86,8 @@ Project Preview
 ========
 ![Imgur](https://i.imgur.com/Ofg1eIv.gif)
 
-
+-![Sample Gif](http://i.imgur.com/Ofg1eIv.gif)
++<img src="/art/sample.gif?raw=true" width="200px">
 
 Sequence Diagram
 =================
