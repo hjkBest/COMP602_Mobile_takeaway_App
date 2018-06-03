@@ -84,10 +84,10 @@ Project Feature (futrue)
 
 Project Preview
 ========
-![Imgur](https://i.imgur.com/Ofg1eIv.gif)
-
--![Sample Gif](http://i.imgur.com/Ofg1eIv.gif)
-+<img src="/art/sample.gif?raw=true" width="200px">
+![GIF1](https://i.imgur.com/sDzq59L.gif)
+![GIF2](https://i.imgur.com/asIX5cQ.gif)
+![GIF3](https://i.imgur.com/nFwhsMi.gif)
+![GIF4](https://i.imgur.com/mUmjD9d.gif)
 
 Sequence Diagram
 =================
