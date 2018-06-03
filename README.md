@@ -91,6 +91,9 @@ Project Preview
 
 Sequence Diagram
 =================
+![image1](http://chuantu.biz/t6/323/1527990821x-1566660859.png)
+
+
 
 ```seq
 user->app: Open the APP
