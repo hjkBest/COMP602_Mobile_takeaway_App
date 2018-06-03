@@ -92,7 +92,7 @@ Project Preview
 Sequence Diagram
 =================
 
-```sequence
+```seq
 user->app: Open the APP
 Note right of app: Load the restaurants List (home page)
 app-->user: display the restaurants List (home page)
