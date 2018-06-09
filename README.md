@@ -84,7 +84,7 @@ Project Feature (futrue)
 
 Project Preview
 ========
-![GIF1](https://i.imgur.com/sDzq59L.gif)
+![GIF1](https://i.imgur.com/I5riChh.gif)
 ![GIF2](https://i.imgur.com/asIX5cQ.gif)
 ![GIF3](https://i.imgur.com/nFwhsMi.gif)
 ![GIF4](https://i.imgur.com/mUmjD9d.gif)
