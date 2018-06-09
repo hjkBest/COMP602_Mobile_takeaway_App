@@ -84,7 +84,7 @@ Project Feature (futrue)
 
 Project Preview
 ========
-![GIF1](https://i.imgur.com/2xH2ZAh.gif)
+![GIF1](https://i.imgur.com/JCxA1kw.gif)
 
 
 Sequence Diagram
