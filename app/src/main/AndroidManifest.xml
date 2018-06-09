@@ -43,17 +43,18 @@
             android:name=".COCO"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".messageSend"
-            android:parentActivityName=".MainActivity" />
-        <activity
             android:name=".scanQR"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".generateQR"
             android:parentActivityName=".MainActivity" />
         <activity
+            android:name=".SearchViewTest"
+            android:parentActivityName=".MainActivity"/>
+        <activity
             android:name=".DisplayInfor"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity">
+        </activity>
     </application>
 
 </manifest>
