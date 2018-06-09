@@ -32,9 +32,13 @@
     <string name="food">Food</string>
     <string name="drink">drink</string>
     <string name="dessert">dessert</string>
-    <string name="phone_number">Phone number</string>
+    <string name="R_name"> Restaurant Name</string>
     <string name="order_detail">Order detail</string>
     <string name="order_string">Hello</string>
     <string name="send">send</string>
     <string name="sendButton">SEND</string>
+    <string name="title_activity_scan_qr">scanQR</string>
+    <string name="title_activity_generate_qr">generateQR</string>
+    <string name="title_activity_display_infor">DisplayInfor</string>
+    <string name="search">Search</string>
 </resources>
