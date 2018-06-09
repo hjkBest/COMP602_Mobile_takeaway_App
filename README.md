@@ -17,7 +17,7 @@ Introduction
 
 Installation
 =====
-* Android API 16 or higher 
+* Android API 23 or higher 
 * Need APP permissions 
    * Camera
    * SMS
