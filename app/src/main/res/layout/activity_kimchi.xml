@@ -90,15 +90,24 @@
                 android:layout_gravity="center_horizontal"/>
         </GridLayout>
     </ScrollView>
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/bnve"
+    <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
+        android:text="@string/sendButton"
         android:layout_alignParentBottom="true"
+        android:gravity="left"
+        android:id="@+id/send_message2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
         android:background="@color/colorPrimary"
-        app:itemIconTint="@color/colorPrimary"
-        app:itemTextColor="@color/selector_item_color"
-        app:menu="@menu/menu_navigation_with_view_pager">
-    </android.support.design.widget.BottomNavigationView>
+        android:text="Order: $0"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:id = "@+id/ordernum"
+        />
 </RelativeLayout>
 

@@ -6,9 +6,12 @@
     tools:context=".DisplayInfor">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:id="@+id/QRresult2"/>
+        android:id="@+id/QRresult2"
+        android:background="@drawable/shape"
+        android:layout_gravity="center"
+        />
 
 
 </android.support.design.widget.CoordinatorLayout>

@@ -24,7 +24,6 @@
         android:textSize="25dp"
         android:layout_gravity="center"/>
 
-
     <EditText
         android:id = "@+id/inputtext"
         android:layout_width="match_parent"

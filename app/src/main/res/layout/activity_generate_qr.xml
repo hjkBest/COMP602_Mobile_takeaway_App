@@ -1,21 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".generateQR">
-
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Here is QR code for your order:"/>
+        android:layout_height="wrap_content"
+        android:text="Here is the detail of your order:"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text=""
+        android:background="@drawable/shape"
+        android:id="@+id/orderdetail"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Here is QR code for your order:"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        />
 
     <android.support.v7.widget.AppCompatImageView
-        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:id="@+id/QRCODE"/>
-
-</android.support.design.widget.CoordinatorLayout>
+</LinearLayout>
