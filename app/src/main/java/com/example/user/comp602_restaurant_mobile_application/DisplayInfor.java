@@ -10,6 +10,11 @@ public class DisplayInfor extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_infor);
+        setTitle("Scan Result Page");
+        SetTextTo();
+    }
+
+    public void SetTextTo(){
         TextView re2 =(TextView)findViewById(R.id.QRresult2);
         final String QRinfor=getIntent().getStringExtra("QRinfor");
         re2.setText(QRinfor);

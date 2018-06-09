@@ -24,9 +24,8 @@ public class scanQR extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan_qr);
+        setTitle("Scan Page");
         ScanQR();
-
-
     }
 
     private void ScanQR(){
@@ -51,7 +50,7 @@ public class scanQR extends AppCompatActivity {
                         Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, packageURI);
                         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent);
-                        Toast.makeText(scanQR.this, "没有权限无法扫描呦", Toast.LENGTH_LONG).show();
+                        Toast.makeText(scanQR.this, "Not allow scan", Toast.LENGTH_LONG).show();
                     }
                 }).start();
 
@@ -65,7 +64,6 @@ public class scanQR extends AppCompatActivity {
                 String content = data.getStringExtra(Constant.CODED_CONTENT);
                 re1 = (TextView)findViewById(R.id.QRresult1);
                 re1.setText(content);
-
                 Intent send = new Intent(scanQR.this, DisplayInfor.class);
                 send.putExtra("QRinfor",content);
                 startActivity(send);

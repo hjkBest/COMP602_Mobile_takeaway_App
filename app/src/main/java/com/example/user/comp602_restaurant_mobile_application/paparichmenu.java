@@ -4,8 +4,6 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.telephony.SmsManager;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -17,75 +15,48 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.view.View.OnClickListener;
 import com.squareup.picasso.Picasso;
 import android.widget.EditText;
-import java.util.List;
+import java.util.ArrayList;
 import java.util.Map;
-import 	java.util.UUID;
 import java.util.HashMap;
 
 public class paparichmenu extends AppCompatActivity {
-    static double total = 0; //total price of the current order
-    int price = 0;  //the price of the each meal
-    int ordernumber = 0; //the amount of the meal which has been ordered
-    String mealname = ""; //the name of meal
-    Map<String,String> m = new HashMap<String, String>(); //use to save the order detail
-    String orderstr = "";  //save the order detail as a string, that could allow us to send it to the another activity
-    String uniqueID = UUID.randomUUID().toString();
-    String num1 = "5554";
+    static double totalPrice = 0;
+    static String orderstr = "";
+    int price = 0;
+    int ordernumber = 0;
+    boolean isclicked = false;
+    String mealname = "";
+    Map<String,String> m = new HashMap<String, String>();
+    ArrayList<String> comment = new ArrayList<String>();
+    String num = "5554";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paparichmenu);
         setTitle("Restaurant1 Menu"); //set title to the Restaurant1 menu page
         setImage(); //method shows below, used to set up the photo
-        Button sendMassage = (Button) findViewById(R.id.send_message);
-        //set ClickListener to the button
-
-        sendMassage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(paparichmenu.this, generateQR.class); //declare new intent
-                String number=num1;
-
-                for (Map.Entry<String, String> order : m.entrySet()) {
-                    String str1 = order.getKey();
-                    String str2 = order.getValue();
-                    orderstr = orderstr + str1 + " " + str2 + "\n";
-                }
-                orderstr = uniqueID + "\n" + orderstr + "\n"  + "$: " + total + "\n";//add the total price to the end of the string
-
-                if(orderstr!=null){
-                    SmsManager smsManager=SmsManager.getDefault();
-                    List<String> texts=smsManager.divideMessage(orderstr);
-                    for(String text:texts)
-                    {
-                        smsManager.sendTextMessage(number,null,text,null,null);
-                        Log.i("sms","send a message");
-                        Toast.makeText(getApplicationContext(),"SENT",Toast.LENGTH_SHORT).show();
-                    }
-                }
-                intent.putExtra("codeinfor",orderstr);
-                startActivity(intent);
-            }
-        });
+        setupsendbutton();
     }
 
     //set Image to each Imagebutton
     public void setImage(){
-            ImageButton M1 = (ImageButton) findViewById(R.id.imageButton1);//declare the imagebutton
+        ImageButton M1 = (ImageButton) findViewById(R.id.imageButton1);//declare the imagebutton
 
-            //use picasso function which allow the application to load the photo with internet
-            Picasso.get().load("http://papparichnz.co.nz/wp-content/uploads/2017/10/App-Image-Noodles-F02.jpg").into(M1);
+        //use picasso function which allow the application to load the photo with internet
+        Picasso.get().load("http://papparichnz.co.nz/wp-content/uploads/2017/10/App-Image-Noodles-F02.jpg").into(M1);
 
-            //set ClickListener
-            M1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    //set the detail of the meal(price, name)
-                    price = 10;
-                    mealname = "meal1";
-                    showLayout();//a dialog will show up when the imagebutton has been click
-                }
-            });
+        //set ClickListener
+        M1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //set the detail of the meal(price, name)
+                price = 10;
+                mealname = "meal1";
+                isclicked = true;
+                showLayout();//a dialog will show up when the imagebutton has been click
+            }
+        });
 
         ImageButton M2 = (ImageButton) findViewById(R.id.imageButton2);
         Picasso.get().load("http://papparichnz.co.nz/wp-content/uploads/2017/10/App-Image-Noodles-F04.jpg").into(M2);
@@ -94,6 +65,7 @@ public class paparichmenu extends AppCompatActivity {
             public void onClick(View v) {
                 price = 15;
                 mealname = "meal2";
+                isclicked = true;
                 showLayout();
             }
         });
@@ -190,6 +162,7 @@ public class paparichmenu extends AppCompatActivity {
         });
 
     }
+
     //show the dialog
     public void showLayout(){
         //declare the detail of the dialog
@@ -206,10 +179,6 @@ public class paparichmenu extends AppCompatActivity {
         final EditText edtext = (EditText) view.findViewById(R.id.inputtext);
         final TextView order = (TextView) findViewById(R.id.ordernum);
 
-
-
-
-
         //set the ClickListener
         btn.setOnClickListener(new OnClickListener() {
             @Override
@@ -217,9 +186,16 @@ public class paparichmenu extends AppCompatActivity {
                 //an confirm message will be show down the bottom of the screen when the user click the confirm button
                 Toast.makeText(paparichmenu.this, "Confirm", Toast.LENGTH_LONG).show();
 
+                //add string into the arraylist
+                String commentstr = edtext.getText().toString();
+                if(commentstr.isEmpty()){
+                    commentstr = "None";
+                }
+                comment.add(commentstr);
+
                 //calculate the price
-                total = total + calorder(price, ordernumber);
-                order.setText("Order: $ " + total);
+                totalPrice = totalPrice + CalculatePrice(price, ordernumber);
+                order.setText("Order: $ " + totalPrice);
                 String strnum = String.valueOf(ordernumber);
                 m.put(mealname,strnum); //put data to the map
             }
@@ -239,12 +215,56 @@ public class paparichmenu extends AppCompatActivity {
                 ordernumber = seekbar.getProgress(); //save the value to the ordernumber
             }
         });
-        alert.show(); //show the dialog
+        alert.show();
     }
-    //method used to calcalate the total price
-    public double calorder(int fprice, int fnumber){
-       double forder;
-       forder = fprice * fnumber;
-       return forder;
+
+    //send order that use to generate the QR code
+    public void SendOrder(){
+        Intent intent = new Intent(paparichmenu.this, generateQR.class); //declare new intent
+
+        if(isclicked) {
+            GenerateOrderInfor();
+            if(orderstr != null){
+                intent.putExtra("codeinfor",orderstr);
+                intent.putExtra("phone",num);
+                startActivity(intent);
+            }
+        }else{
+            Intent re = new Intent(paparichmenu.this, MainActivity.class);
+            Toast.makeText(paparichmenu.this, "No Order Received", Toast.LENGTH_LONG).show();
+            startActivity(re);
+        }
+    }
+
+    //generate the order detail
+    public void GenerateOrderInfor(){
+        for (Map.Entry<String, String> order : m.entrySet()) {
+            int i =0;
+            String str1 = order.getKey();
+            String str2 = order.getValue();
+            String mealcomment = comment.get(i).toString();
+            orderstr = orderstr + str1 + " (" + str2 + ") \n"  + "Comment: " + mealcomment + "\n";
+            i++;
+        }
+        orderstr = orderstr + "\n"  + "$: " + totalPrice + "\n";
+    }
+
+    //button use to send the message
+    public void setupsendbutton(){
+        Button sendMassage = (Button) findViewById(R.id.send_message1);
+        //set ClickListener to the button
+        sendMassage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SendOrder();
+            }
+        });
+    }
+
+    //calculate the total price
+    public double CalculatePrice(int price, int num){
+        double order;
+        order = price * num;
+        return order;
     }
 }
